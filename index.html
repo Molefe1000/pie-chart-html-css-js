@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pie Chart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card" role="application" aria-label="Interactive Pie Chart">
+        <div class="chart-wrap">
+            <svg id="pie" viewBox="0 0 320 320" role="img" aria-labelledby="pieTitle pieDesc">
+
+<!-- This will create a hover effect that will reveal details of the pie slice -->                
+                <title id="pieTitle">Election Results</title>
+                <desc id="pieDesc">Interactive pie chart. hover a slice to see details.</desc>
+                <g transform="translate(160, 160) rotate(-90)"></g>
+            </svg>
+            <div id="tooltip" class="tooltip" aria-hidden="true"></div>
+        </div>
+<!-- Contains labels of the chart, Election Results and percentageg -->
+        <div class="legend" id="legend-area">
+            <h3>Election Results</h3>
+            <div class="legend-list" id="legend"></div>
+
+<!-- Buttons that will, Randomize results, Add another pie slice, Reset all data -->
+            <div class="controls">
+                <button id="randomize" class="btn">Randomize</button>
+                <button id="add" class="btn">Add Slice</button>
+                <button id="reset" class="btn">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
